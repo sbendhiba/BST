@@ -1,6 +1,5 @@
 import drawtree
 
-
 class Node:
     def __init__(self, data):
         self.left = None
