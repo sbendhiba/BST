@@ -89,25 +89,25 @@ class Node:
             return []
         return [node.data] + self.tree_to_list(node.left) + self.tree_to_list(node.right)
 
-    def infixe(self,root):
+    def infixe(self, root):
         if root is not None:
             self.infixe(root.left)
             print(root.data)
             self.infixe(root.right)
 
-    def prefixe(self,root):
+    def prefixe(self, root):
         if root is not None:
             print(root.data)
             self.prefixe(root.left)
             self.prefixe(root.right)
 
-    def postfixe(self,root):
+    def postfixe(self, root):
         if root is not None:
             self.postfixe(root.left)
             self.postfixe(root.right)
             print(root.data)
 
-    def profondeur(self,root):
+    def profondeur(self, root):
         pile = []
         if root:
             pile.append(root)
@@ -121,7 +121,7 @@ class Node:
 
 
 
-    def Tlenght(self,root):
+    def Tlenght(self, root):
         if (root.left is None and root.right is None):
             return 0
         else:
@@ -133,7 +133,7 @@ class Node:
                 tmp2 = self.Tlenght(root.right)
             return 1+ max(tmp1,tmp2)
 
-    def Tweight(self,root):
+    def Tweight(self, root):
         if (root.left is None and root.right is None):
             return 1
         else:
@@ -146,12 +146,12 @@ class Node:
             return 1+ tmp1 + tmp2
 
 
-    def largeur(self,root):
+    def largeur(self, root):
         file = []
         if root:
             print(root.data)
             file.append(root)
-            while(len(file) !=0 ):
+            while(len(file) != 0):
                 node = file.pop(0)
                 if node.left:
                     print(node.left.data)
