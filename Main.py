@@ -169,10 +169,10 @@ root.insert(1)
 root.insert(6)
 root.insert(4)
 root.insert(7)
+root.insert(53)
 root.insert(14)
 root.insert(13)
-
-root.delete(10)
+root.insert(72)
 
 
 print('-----------  Largeur  ------------')
